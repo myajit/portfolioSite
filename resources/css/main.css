@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.logo img {
+    width: 150px;
+}
+
+.global-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(24,1fr); 
+    align-self: flex-end;
+    height: 4.0625rem;
+    z-index: 99999;
+}
+
+.logo {
+    display: flex;
+    flex-grow: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    pointer-events: all;
+    grid-area: 1/2/1/8;
+}
+
+.menu {
+   
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    grid-area: 1/20/1/24;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.menu a {
+    color: rgb(51, 51, 51);
+    position: relative;
+}
+
+.menu a:before {
+    content: "";
+    bottom: -8px;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgb(77, 77, 77);
+    transition: 0.5s;
+}
+
+.menu a:hover:before {
+    content: "";
+    bottom: -8px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(77, 77, 77);
+    transition: 0.5s;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.titleWarp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    height: calc(30% - 2.1875rem);
+    font-size: 6rem;
+    text-align: center;
+    line-height: 7.4rem;
+}
+
+.title-ani {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-video {
+    width: 65%;
+    margin-top: 5%;
+    height: calc(40% - 2.1875rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.title-video video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.projectWarp {
+    min-height: 43.75rem;
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    grid-template-rows: 10% 80% 10%;
+    height: 70vh;
+    position: relative;
+}
+
+.projectImg {
+    grid-area: 2/4/2/22;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.projectImg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    animation: img 10s infinite;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.projectImg img:hover {
+    opacity: 1;
+}
+
+.projectImg img:hover {
+    
+}
+
+.projectLink {
+    position: absolute;
+    top: 15%;
+    left: 14%;
+    font-size: 3rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.projectLink a {
+    color: rgb(255, 255, 255);
+}
+
+.projectLink a:before {
+    content: "";
+    bottom: -8px;
+    position: absolute;
+    transform: translateX(-5px);
+    width: 110%;
+    height: 0;
+    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.projectLink a:hover:before {
+    height: 4px;
+}
+
+.projectInfo {
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    font-size: 3rem;
+    font-weight: 300;
+    z-index: 1;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.projectInfo p,
+.projectInfo a {  
+    color: rgb(255, 255, 255);
+    line-height: 1.5rem;
+}
+
+.projectInfo a {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 7px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.projectInfo a:hover {
+    color: #000;
+    background-color: white;
+}
+
+strong {
+    font-weight: 500;
+}
+
+
+@keyframes img {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* 21-12-31 jung */
+.historyContent {
+    padding: 4.375rem 11.33333vw 4.375rem 11.33333vw;
+}
+
+.historyTop {
+    font-size: 6rem;
+    line-height: 7.5rem;
+    font-weight: normal;
+}
+
+.historyBottom {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.historyImg {
+    padding-right: 5rem;
+    width: 54%;
+    padding-top: 3.75rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Mont;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.innerImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.innerImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.historyCount {
+    margin-top: 40px;
+}
+
+.historyName {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.1em;
+}
+
+.historyEx {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+}
+
